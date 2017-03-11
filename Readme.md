@@ -5,6 +5,7 @@ This along with a robots.txt helps to direct what you want and don't want search
 
 ## Install
 Currently this project does not have matching release tags that syncs up with the Mediawiki version. Meaning, just simple clone master.
+
 1. Download the latest snapshot
     1. ```cd /path/to/mediawiki/extensions```
     2. ```git clone https://github.com/dolfinus/AutoSitemap.git```
