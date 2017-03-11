@@ -1,14 +1,17 @@
-# [AutoSitemap](https://www.mediawiki.org/wiki/Extension:AutoSitemap)
+# AutoSitemap Mediawiki Extension
+
 ## Description
 MediaWiki extension that automatically builds a sitemap.xml file every time a page is created, edited or deleted. A sitemap file helps search engines to observe and focus on a web sites page content. 
 This along with a robots.txt helps to direct what you want and don't want search engines to index.
 
 ## Install
-Currently this project does not have matching release tags that syncs up with the Mediawiki version. Meaning, just simple clone master.
+This extension has releases that go back to REL1_20. It may work on old versions as well. 
+If a new version of Mediawiki comes out before a release is cut on this repo; use master or that latest released version.
 
-1. Download the latest snapshot
+1. Download the matching release
     1. ```cd /path/to/mediawiki/extensions```
-    2. ```git clone https://github.com/dolfinus/AutoSitemap.git```
+    2. ```git clone --branch REL1_28 https://github.com/bonusbits/AutoSitemap.git```
+    
 2. Set Ownership of extension directory as needed
     1. ``chown -R apache:apache /path/to/mediawiki/extensions/AutoSitemap```
     2.  **OR**
@@ -16,6 +19,10 @@ Currently this project does not have matching release tags that syncs up with th
 3. Add extension load statement to the Mediawiki configuration [LocalSettings.php](https://www.mediawiki.org/wiki/Manual:LocalSettings.php).<br>
     ```php
     wfLoadExtension( 'AutoSitemap' );
+    ```
+    Or the old method with work for awhile<br>
+    ```php
+    require_once "{$IP}/extensions/AutoSitemap/AutoSitemap.php";
     ```
 
 ## Configure
@@ -124,6 +131,8 @@ If you want to see a human-readable sitemap, allow read access for sitemap.xsl f
     * ```less /var/log/nginx/access.log```
 
 # See also
+* [Forked from this Extension Repo](https://github.com/dolfinus/AutoSitemap.git)
+* [Original Extension](https://www.mediawiki.org/wiki/Extension:AutoSitemap)
 * [Very old original extension](https://www.mediawiki.org/wiki/Extension:ManualSitemap)
 * [Wikipedia about sitemaps](https://en.wikipedia.org/wiki/Sitemaps)
 * [Google about sitemaps](https://support.google.com/webmasters/answer/156184)
